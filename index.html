@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search Test</title>
+</head>
+
+<body>
+    <h1>Binary Search Test</h1>
+
+    <script src="index.js"></script>
+
+    <script>
+        //test the iterative binary search
+        performance.mark("timer-start");
+        const iterativeResult = binarySearchIterative(13, values);
+        performance.mark("timer-stop");
+        console.log('Iterative Result:', iterativeResult);
+
+        //test the recursive binary search
+        performance.mark("index-start");
+        const recursiveResult = binarySearchRecursive(13, values, 0, values.length - 1);
+        performance.mark("index-stop");
+        console.log('Recursive Result:', recursiveResult);
+    </script>
+</body>
+
+</html>
